@@ -1,0 +1,30 @@
+<%= form_with model: board, local: true do |f| %>
+  <h1>作成ページ</h1>
+
+  <div class="form-group">
+    <h3>動画タイトル</h3>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <h3>好きな理由を一言で！（20文字以内）</h3>
+    <%= f.text_field :why, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <h3>もっと熱く理由を語りたい方はこちらへ（任意）</h3>
+    <%= f.text_area :why2, class: 'form-control', rows: 10 %>
+  </div>
+
+  <div class="form-group">
+    <h3>動画 URL</h3>
+    <%= f.text_field :url, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <h3>あなたの名前</h3>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
